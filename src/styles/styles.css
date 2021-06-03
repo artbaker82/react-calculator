@@ -1,0 +1,17 @@
+.container {
+  border: 1px solid;
+  max-width: 500px;
+}
+
+.row {
+  margin: 40px 0;
+}
+
+.btn {
+  border-radius: 20px;
+  font-size: larger;
+}
+
+.zero-btn {
+  width: 75%;
+}
