@@ -1,6 +1,6 @@
 .container {
   border: 1px solid;
-  max-width: 500px;
+  max-width: 300px;
 }
 
 .row {
@@ -8,10 +8,93 @@
 }
 
 .btn {
-  border-radius: 20px;
+  border-radius: 50px;
   font-size: larger;
 }
 
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-secondary:focus {
+  background-color: #6c757d;
+  animation-name: colorFlash;
+  animation-duration: 0.5s;
+}
+
+@keyframes colorFlash {
+  0% {
+    background-color: #6c757d;
+  }
+  50% {
+    background-color: rgb(130, 158, 165);
+  }
+  100% {
+    background-color: #6c757d;
+  }
+}
+
+.btn-info:focus {
+  background-color: #17a2b8;
+  animation-name: colorFlash2;
+  animation-duration: 0.5s;
+}
+
+@keyframes colorFlash2 {
+  0% {
+    background-color: #17a2b8;
+  }
+  50% {
+    background-color: #62a3ad;
+  }
+  100% {
+    background-color: #17a2b8;
+  }
+}
+.btn-warning {
+  color: white;
+  background-color: #ffc107;
+}
+.btn-warning-click {
+  background-color: #f5f4f0;
+  color: #ffc107;
+}
+
+.btn-warning:focus,
+.btn-warning.focus {
+  color: #e0a800;
+  background-color: #f7f6f3;
+}
+.btn-warning:hover {
+  color: #212529;
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
 .zero-btn {
-  width: 75%;
+  width: 100%;
+}
+
+.btn-operations {
+  width: 30px;
+}
+
+.btn-equals:focus {
+  animation-name: colorFlash3;
+  animation-duration: 0.5s;
+  background-color: #e0a800;
+  color: #f7f6f3;
+}
+
+@keyframes colorFlash3 {
+  0% {
+    background-color: #e0a800;
+  }
+  50% {
+    background-color: #fbfce3;
+  }
+  100% {
+    background-color: #e0a800;
+  }
 }

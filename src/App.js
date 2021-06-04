@@ -1,21 +1,27 @@
 import React, { Component } from "react";
-import "../src/styles/styles.css";
+
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      operationsClicked: false,
+      currentOperation: undefined,
+    };
   }
+
+  handleOperation = () => {};
+
   render() {
     return (
       <>
         <div className="container my-5">
           <div className="row">
-            <div className="col text-center">Input displayed here</div>
+            <div className="col text-center"></div>
           </div>
           <div className="row">
             <div className="col-3">
-              <button type="button" className="btn btn-info">
-                Clear
+              <button type="button" className="btn btn-info btn-custom">
+                C
               </button>
             </div>
             <div className="col-3">
@@ -29,7 +35,11 @@ class App extends Component {
               </button>
             </div>
             <div className="col-3">
-              <button type="button" className="btn btn-warning">
+              <button
+                type="button"
+                className="btn btn-warning"
+                onClick={() => this.handleOperation("/")}
+              >
                 /
               </button>
             </div>
@@ -112,7 +122,7 @@ class App extends Component {
               </button>
             </div>
             <div className="col-3">
-              <button type="button" className="btn btn-warning">
+              <button type="button" className="btn btn-warning btn-equals">
                 =
               </button>
             </div>
